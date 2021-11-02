@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.7.7 on win32)" generated="20211101 14:44:30.811" rpa="false">
+<suite id="s1" name="Lumoa Test" source="C:\Users\OWNER\PycharmProjects\Lumoa_Test1\TestSuite\Functional_Test\Lumoa_Test.robot">
+<test id="s1-t1" name="Valid Login">
+<kw name="Navigate to Homepage" library="Lumoa_User_Resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20211101 14:44:31.884" level="INFO">Opening browser 'chrome' to base url 'https://stage.lumoa.me'.</msg>
+<status status="PASS" starttime="20211101 14:44:31.883" endtime="20211101 14:44:44.167"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211101 14:44:44.167" endtime="20211101 14:44:44.991"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<status status="PASS" starttime="20211101 14:44:44.991" endtime="20211101 14:44:44.996"></status>
+</kw>
+<status status="PASS" starttime="20211101 14:44:31.882" endtime="20211101 14:44:44.996"></status>
+</kw>
+<kw name="Login with Valid Credentials" library="Lumoa_User_Resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${EMAIL_FIELD}</arg>
+</arguments>
+<msg timestamp="20211101 14:44:45.000" level="INFO">Clicking element 'name:email'.</msg>
+<status status="PASS" starttime="20211101 14:44:44.999" endtime="20211101 14:44:45.155"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${EMAIL_FIELD}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20211101 14:44:45.157" level="INFO">Typing text 'admintesti222@mailinator.com' into text field 'name:email'.</msg>
+<status status="PASS" starttime="20211101 14:44:45.156" endtime="20211101 14:44:45.907"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${NEXT}</arg>
+</arguments>
+<msg timestamp="20211101 14:44:45.908" level="INFO">Clicking element 'xpath://*[@id="root"]/div/div/div[1]/div/div/form/button/span[1]'.</msg>
+<status status="PASS" starttime="20211101 14:44:45.907" endtime="20211101 14:44:46.181"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20211101 14:44:46.182" endtime="20211101 14:44:46.191"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD_FIELD}</arg>
+</arguments>
+<msg timestamp="20211101 14:44:46.193" level="INFO">Clicking element 'name:password'.</msg>
+<status status="PASS" starttime="20211101 14:44:46.192" endtime="20211101 14:44:47.124"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20211101 14:44:47.124" level="INFO">Typing text '2Strong!' into text field 'name:password'.</msg>
+<status status="PASS" starttime="20211101 14:44:47.124" endtime="20211101 14:44:47.516"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20211101 14:44:47.517" level="INFO">Clicking element 'xpath://*[@id="root"]/div/div/div[1]/div/div/form/button/span[1]'.</msg>
+<status status="PASS" starttime="20211101 14:44:47.517" endtime="20211101 14:44:47.739"></status>
+</kw>
+<status status="PASS" starttime="20211101 14:44:44.998" endtime="20211101 14:44:47.740"></status>
+</kw>
+<kw name="Assert Sucessful Login" library="Lumoa_User_Resource">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>HOME</arg>
+</arguments>
+<msg timestamp="20211101 14:44:50.850" level="INFO">Current page contains text 'HOME'.</msg>
+<status status="PASS" starttime="20211101 14:44:47.742" endtime="20211101 14:44:50.852"></status>
+</kw>
+<status status="PASS" starttime="20211101 14:44:47.741" endtime="20211101 14:44:50.852"></status>
+</kw>
+<tags>
+<tag>Functional Test</tag>
+</tags>
+<status status="PASS" starttime="20211101 14:44:31.880" endtime="20211101 14:44:50.885" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Inpect Card on The Dashboard">
+<kw name="Select Card 222 on the Sidemenu" library="Lumoa_User_Resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${KEBAB_MENU}</arg>
+</arguments>
+<msg timestamp="20211101 14:44:50.891" level="INFO">Clicking element 'class:Sidemenu-group'.</msg>
+<status status="PASS" starttime="20211101 14:44:50.891" endtime="20211101 14:44:51.113"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<status status="PASS" starttime="20211101 14:44:51.114" endtime="20211101 14:44:51.153"></status>
+</kw>
+<status status="PASS" starttime="20211101 14:44:50.890" endtime="20211101 14:44:51.153"></status>
+</kw>
+<kw name="Inpect Company84collection218" library="Lumoa_User_Resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${C22_dashboard}</arg>
+</arguments>
+<msg timestamp="20211101 14:44:51.158" level="INFO">Clicking element 'xpath:/html/body/div[3]/div[3]/div/div[2]/div'.</msg>
+<status status="PASS" starttime="20211101 14:44:51.158" endtime="20211101 14:45:16.183"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20211101 14:45:16.183" endtime="20211101 14:45:16.200"></status>
+</kw>
+<status status="PASS" starttime="20211101 14:44:51.157" endtime="20211101 14:45:16.200"></status>
+</kw>
+<kw name="Inspect Impact Page" library="Lumoa_User_Resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${NEW_CARD_COLLECTION}</arg>
+</arguments>
+<msg timestamp="20211101 14:45:16.205" level="INFO">Clicking element 'xpath://*[@id="root"]/div/div/div[3]/div/div/div[1]/div[2]/div[2]/div/div[2]'.</msg>
+<status status="PASS" starttime="20211101 14:45:16.204" endtime="20211101 14:45:16.517"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Topic impacts</arg>
+</arguments>
+<msg timestamp="20211101 14:45:17.960" level="INFO">Current page contains text 'Topic impacts'.</msg>
+<status status="PASS" starttime="20211101 14:45:16.518" endtime="20211101 14:45:17.960"></status>
+</kw>
+<status status="PASS" starttime="20211101 14:45:16.203" endtime="20211101 14:45:17.961"></status>
+</kw>
+<kw name="Assert IMPACT page and data visible" library="Lumoa_User_Resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SAMPLE_STATS}</arg>
+</arguments>
+<msg timestamp="20211101 14:45:17.968" level="INFO">Clicking element 'xpath://*[@id="root"]/div/div/div[3]/div/div[2]/div/div/div/div[2]/div[1]/div/div[1]/div[1]/div[2]/div/button[2]'.</msg>
+<status status="PASS" starttime="20211101 14:45:17.967" endtime="20211101 14:45:20.154"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Insights by volume</arg>
+</arguments>
+<msg timestamp="20211101 14:45:21.470" level="INFO">Current page contains text 'Insights by volume'.</msg>
+<status status="PASS" starttime="20211101 14:45:20.159" endtime="20211101 14:45:21.470"></status>
+</kw>
+<status status="PASS" starttime="20211101 14:45:17.966" endtime="20211101 14:45:21.470"></status>
+</kw>
+<status status="PASS" starttime="20211101 14:44:50.888" endtime="20211101 14:45:21.473" critical="yes"></status>
+</test>
+<doc>Test to verify that the user can login and access cards on the dashboard</doc>
+<status status="PASS" starttime="20211101 14:44:30.819" endtime="20211101 14:45:21.484"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">Functional Test</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" id="s1" name="Lumoa Test">Lumoa Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20211101 14:44:31.875" level="ERROR">Error in file 'C:\Users\OWNER\PycharmProjects\Lumoa_Test1\resources\Lumoa_User_Resource.robot' on line 3: Importing test library 'Fakerlibrary' failed: ModuleNotFoundError: No module named 'Fakerlibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\OWNER\AppData\Local\Programs\Python\Python37\Scripts\robot.exe
+  c:\users\owner\appdata\local\programs\python\python37\python37.zip
+  c:\users\owner\appdata\local\programs\python\python37\DLLs
+  c:\users\owner\appdata\local\programs\python\python37\lib
+  c:\users\owner\appdata\local\programs\python\python37
+  c:\users\owner\appdata\local\programs\python\python37\lib\site-packages
+  c:\users\owner\appdata\local\programs\python\python37\lib\site-packages\win32
+  c:\users\owner\appdata\local\programs\python\python37\lib\site-packages\win32\lib
+  c:\users\owner\appdata\local\programs\python\python37\lib\site-packages\Pythonwin</msg>
+</errors>
+</robot>
